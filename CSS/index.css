@@ -1,1 +1,243 @@
+/*清除預設*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}  
+@media screen and (max-width: 1920px) {
+  /*共用*/
+   html ,button ,input{   
+    font-family: 'Noto Sans TC', sans-serif; 
+  }
+  img{
+    max-width: 100%;
+  }
+  /*頁首區*/
+  .header{
+    position: fixed;    
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;        
+    box-sizing: border-box;
+    width: 100vw;  
+    height: 56px;
+    border: 1px solid #00B4D8;
+    background-color: #90E0EF;
+  }
+  .header-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 100%; 
+    margin: 10px auto; 
+    padding:0 100px;
+    box-sizing: border-box;
+  }
+  .header-logo{
+    max-width: 150px;
+    height: 100%;
+    font-weight: 700;
+    font-size: 30px;
+    text-decoration: none; 
+    color: #E4F7FB;
+    white-space:nowrap;
+  }
+  /*本文區*/
+  .main-container{ 
+    display: flex;
+    flex-direction:row;    
+    justify-content: space-between;   
+    align-items: center ; 
+    max-width: 1000px;              
+    margin: 10px auto;              
+    height: auto;
+    padding-top: 80px;
+    box-sizing: border-box;
+  }
+  .weather-container{ 
+    display: flex;
+    flex-direction:column; 
+    justify-content: space-between; 
+    width: 50%;
+    height: 100%;
+  }
+  /*通用*/
+  /*通用-容器設定*/
+  .weather-title-container,.weather-today-container,.weather-item,.weather-week-container{
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding:10px;
+    background-color: #E4F7FB;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); 
+  }
+  .weather-items-container{
+    display: flex;
+    flex-direction:row;   
+    justify-content: space-between;
+    width:100%;
+    margin: 15px 0;
+    
+  }
+  .weather-item{
+   width:48%;
+  }
+  /*通用-文字設定*/
+  .weather-subtitle{
+    font-weight: 700;
+    font-size: 16px;
+    text-align:center;
+    color:#3C3C3C;
+  }
+  .weather-text{
+    color:#4F4F4F;
+    text-align:center;
+  }
+  /*通用-圖片設定*/
+  .weather-tomorrow-img{
+    width:40%;
+  }
+  /*各自*/
+   /*各自-標題*/
+  .weather-title-container{
+     text-align:center;
+     padding: 5px 15px;
+     box-sizing: border-box;
+  }
+  .weather-title-text{
+    font-weight: 700;
+    font-size: 18px;
+    color:#272727;
+  }
+   /*各自-今日*/
+  .weather-today-container{
+    display: flex;
+    flex-direction:row;   
+    justify-content: space-between;
+    width: 100%;
+  }
+  .weather-today-wrapper{
+    display: flex;
+    flex-direction:column;  
+    justify-content: space-between;
+    width: 50%;
+  }
+  .weather-today-img{
+    width:50%;
+    height:60px;
+    object-fit: cover;
+    margin-left:20px;
+  }
+  /*各自-一周*/
+  .weather-week-container{
+    display: flex;
+    flex-direction:column;  
+    justify-content: space-between;
+    width:100%;
+  }
+  .weather-week-wrapper{
+    display: flex;
+    flex-direction:row;  
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+  .weather-week-item-wrapper{
+    display: flex;
+    max-width: 10%;
+    flex-direction:column;  
+    justify-content: space-between;
+    margin: 5px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  .weather-week-img{
+    height:30px;
+    object-fit: cover;
+  }
+  /*卡片盒*/
+   .card-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px; 
+    padding: 10px;
+    width: 50%; 
+    margin-left:50px;
+    box-sizing: border-box;
+  }
+  .card-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
+    background-color: #CAF0F8;
+    border-radius: 5px;
+    cursor: pointer; 
+    transition: transform 0.3s ease-in-out;
+  }
+  .card-wrapper:hover {
+    transform: scale(1.05);
+  }
+  .card-text {
+    font-weight: 700;
+    color: #3C3C3C;
+  }
+  /*頁尾區*/
+  .footer{
+    width: 100%;
+    height:auto; 
+    box-sizing: border-box;
+    padding: 40px 0px; 
+    background-color: #48CAE4;
+    margin: 40px 0 0 0;
+  }
+  .footer-text{   
+    width: 100%;   
+    font-weight: 700;
+    font-size: 16px;
+    white-space: nowrap; 
+    text-align: center;
+    color: #FFFFFF;
+    margin: auto;                
+  }
+}
+ @media (max-width: 500px) {
+  
+}
 
