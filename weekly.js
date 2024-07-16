@@ -1,4 +1,4 @@
-function weather(location){
+async function weather(location){
     fetch(`https://opendata.cwa.gov.tw/api/v1/rest/datastore/F-D0047-091?Authorization=CWA-A25CF329-C737-4132-8E89-07F9DEC00AA2&locationName=${location}`)
     .then(response => {return response.json()})
     .then(result => {
@@ -60,3 +60,8 @@ function renderWeather(cleanedArray) {
         tempElement.textContent = `${data["minT"]}°C~${data["maxT"]}°C`;
     }
 }
+
+
+weather("臺北市");
+
+export { weather };
