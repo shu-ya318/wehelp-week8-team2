@@ -12,7 +12,7 @@ function botSayHi() {
   };
 
   const webhookURL =
-    "https://discord.com/api/webhooks/1262655991493820538/GuzNTWxzKfXvJIIYCVP5rt-czupf8XJrqbwJlDf811VThpvKdC0xCdlTl40Zbxs82H5z";
+    "https://discord.com/api/webhooks/1162404320399085690/y6pNTIyURc4-ftZIicqF49uzwNTF70bRw_9D1QyVrmxzbwagnXXX-HNW2E6QvzUJVUVS";
   const embed = {
     title: "氣象預報小幫手",
     color: 0x1e90ff,
