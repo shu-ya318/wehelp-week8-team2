@@ -214,19 +214,42 @@ table {
     box-sizing: border-box;
   }
   /*卡片盒*/
-   .card-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 10px; 
-    width: 50%; 
-    margin-left:70px;
-    box-sizing: border-box;
+  .card-container {
+    flex: 1; 
+    max-width: 100%; 
+    margin-left: 70px;
   }
+  
+  .area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  
+  .card-title {
+    font-weight: 700;
+    font-size: 21px;
+    text-align: center;
+    color: #3C3C3C;
+  }
+  
+    .card-container2 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px; 
+      padding: 10px;
+      width: 100%; 
+      box-sizing: border-box;
+    }
+
   .card-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    min-height: 40px;
     border: 2px solid #0096C7;
     border-radius: 10px;
     padding: 0px 5px;
