@@ -201,8 +201,8 @@ async function render_three_span_wether(location_name) {
   const weatherItem1 = weatherItems[0]
   const weatherItem2 = weatherItems[1]
   
-  weatherItem1.querySelector(".weather-subtitle").innerText = span1
-  weatherItem2.querySelector(".weather-subtitle").innerText = span2
+  weatherItem1.querySelector(".weather-subtitle").innerText = span2
+  weatherItem2.querySelector(".weather-subtitle").innerText = span3
 
   //第二第三 的最低溫 最高溫
   weatherItem1.querySelector("#tomorrow-day-temperature").innerText = `${minTValue2}~${maxTValue2}`;
