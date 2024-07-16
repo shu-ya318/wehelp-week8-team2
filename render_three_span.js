@@ -186,7 +186,7 @@ async function render_three_span_wether(location_name) {
   const maxTValue3 = weather3["maxT"]
 
   //第一個時段
-  weatherToday = document.querySelector(".weather-today-wrapper")
+  let weatherToday = document.querySelector(".weather-today-wrapper")
   weatherToday.querySelector(".weather-subtitle").innerText = span1
   weatherToday.querySelector("#today-temperature").innerText = `${minTValue1}~${maxTValue1}`;
   weatherToday.querySelector("#today-precipitation").innerText = `降雨率：${popValue1}`;

@@ -182,7 +182,7 @@ table {
   .weather-today-img{
     width:50%;
     height:60px;
-    object-fit: cover;
+    /* object-fit: cover; */
     margin-left:20px;
   }
   /*各自-一周*/
