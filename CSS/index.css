@@ -43,8 +43,11 @@ table {
 }  
 @media screen and (max-width: 1920px) {
   /*共用*/
-   html ,button ,input{   
+  html{   
     font-family: 'Noto Sans TC', sans-serif; 
+  }
+  body{
+    background-image: url(https://images.unsplash.com/photo-1498354136128-58f790194fa7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   }
   img{
     max-width: 100%;
@@ -59,8 +62,10 @@ table {
     box-sizing: border-box;
     width: 100vw;  
     height: 56px;
-    border: 1px solid #00B4D8;
-    background-color: #90E0EF;
+    border: 1px solid #0096C7;
+    background-color: #F0F0F0;
+    opacity: 0.9;
+    
   }
   .header-container{
     display: flex;
@@ -77,8 +82,12 @@ table {
     font-weight: 700;
     font-size: 30px;
     text-decoration: none; 
-    color: #E4F7FB;
+    color: 		#0096C7;
     white-space:nowrap;
+  }
+  .header-link{
+    margin-top:8px;
+    margin-right: 20px;
   }
   /*本文區*/
   .main-container{ 
@@ -97,15 +106,23 @@ table {
     flex-direction:column; 
     justify-content: space-between; 
     width: 50%;
-    height: 100%;
+    height: 600px;
+    margin: 10px 0;
+    box-sizing: border-box;
+  }
+  .card-container{
+    height: 600px;
+    box-sizing: border-box;
   }
   /*通用*/
   /*通用-容器設定*/
   .weather-title-container,.weather-today-container,.weather-item,.weather-week-container{
     box-sizing: border-box;
     border-radius: 5px;
-    padding:10px;
-    background-color: #E4F7FB;
+    padding: 5px 0 10px 0;
+    border: 2px solid #0096C7;
+    background-color: 		#F0F0F0;
+    opacity: 0.9;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.3); 
   }
   .weather-items-container{
@@ -113,8 +130,7 @@ table {
     flex-direction:row;   
     justify-content: space-between;
     width:100%;
-    margin: 15px 0;
-    
+    box-sizing: border-box;
   }
   .weather-item{
    width:48%;
@@ -122,13 +138,15 @@ table {
   /*通用-文字設定*/
   .weather-subtitle{
     font-weight: 700;
-    font-size: 16px;
+    font-size: 20px;
     text-align:center;
-    color:#3C3C3C;
+    color:		#003060;
   }
   .weather-text{
-    color:#4F4F4F;
+    color:		#003060;
     text-align:center;
+    margin-top: 10px;
+    box-sizing: border-box;
   }
   /*通用-圖片設定*/
   .weather-tomorrow-img{
@@ -143,8 +161,10 @@ table {
   }
   .weather-title-text{
     font-weight: 700;
-    font-size: 18px;
-    color:#272727;
+    font-size: 24px;
+    color:#003060;
+    margin: 10px 0;
+    box-sizing: border-box;
   }
    /*各自-今日*/
   .weather-today-container{
@@ -190,54 +210,95 @@ table {
   .weather-week-img{
     height:30px;
     object-fit: cover;
+    margin-top: 10px;
+    box-sizing: border-box;
   }
   /*卡片盒*/
    .card-container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 10px; 
-    padding: 10px;
     width: 50%; 
-    margin-left:50px;
+    margin-left:70px;
     box-sizing: border-box;
   }
   .card-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100px;
-    background-color: #CAF0F8;
-    border-radius: 5px;
+    
+    border: 2px solid #0096C7;
+    border-radius: 10px;
+    padding: 0px 5px;
+    box-sizing: border-box;
     cursor: pointer; 
     transition: transform 0.3s ease-in-out;
   }
   .card-wrapper:hover {
     transform: scale(1.05);
+    background-color: #009CCA;
+    color: #FFFFFF;
   }
   .card-text {
     font-weight: 700;
-    color: #3C3C3C;
+    color: #003D79;
+    font-size: 20px;
   }
+
   /*頁尾區*/
   .footer{
     width: 100%;
     height:auto; 
     box-sizing: border-box;
     padding: 40px 0px; 
-    background-color: #48CAE4;
+    background-color:#0096C7;
     margin: 40px 0 0 0;
+    opacity: 0.7;
   }
   .footer-text{   
     width: 100%;   
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     white-space: nowrap; 
     text-align: center;
     color: #FFFFFF;
     margin: auto;                
   }
 }
- @media (max-width: 500px) {
-  
+@media screen and (max-width: 1199px) {
+  .main-container{
+    padding: 80px  10px;
+  }
+  .card-container{
+    margin-left: 20px;
+    width: 45vw; 
+  }
+}
+@media screen and (max-width: 576px) {
+  .header-container{
+    padding: 0 30px;
+  }
+  .main-container{ 
+    flex-direction: column;
+    padding-bottom: 5px;
+  }
+  .weather-container,.card-container{
+    width: 90vw;
+  }
+  .weather-container{
+    margin-bottom: 30px;
+  }
+  .card-container{
+    margin-top: 30px;
+    margin-left: 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .card-wrapper {
+   background-color: #F0F0F0;
+   opacity: 0.8;
+  }
+  .footer{
+    margin: 0;
+  }
 }
 
