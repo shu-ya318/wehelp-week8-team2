@@ -89,6 +89,18 @@ table {
     margin-top:8px;
     margin-right: 20px;
   }
+
+  .icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  #discord {
+    max-width:34px;
+    max-height:34px;
+    cursor: pointer;
+  }
+
   /*本文區*/
   .main-container{ 
     display: flex;

@@ -1,6 +1,13 @@
 import { renderSunRaiseAndSet } from './render_sun_raise_and_set.js';
 import { weather } from './weekly.js';
 import { render_three_span_wether } from './render_three_span.js';
+import { botSayHi } from './discord_webhook.js';
+
+
+document.getElementById("discord").addEventListener("click", function(){
+  botSayHi();
+});
+
 
 function setupLocationCards() {
   const cards = document.querySelectorAll('.card-wrapper');
