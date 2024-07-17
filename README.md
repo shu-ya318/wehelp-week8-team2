@@ -42,10 +42,10 @@
     + Fetch 各地區日出日落時間 API 與頁面渲染
     + Discord Webhook 連動
 
-+ **游如婕&nbsp;&nbsp;**[![GitHub](./image/github-16.png)](https://github.com/jamyyu)
++ **鄭克萱&nbsp;&nbsp;**[![GitHub](./image/github-16.png)](https://github.com/Kellyontheboat)
     + Fetch 36 小時（今晚明晨、明日白天、明日夜間）氣溫、降雨機率 API 與頁面渲染
 
-+ **鄭克萱&nbsp;&nbsp;**[![GitHub](./image/github-16.png)](https://github.com/Kellyontheboat)
++ **游如婕&nbsp;&nbsp;**[![GitHub](./image/github-16.png)](https://github.com/jamyyu)
     + Fetch 未來一週氣象預報 API 與頁面渲染
 
 + **詹硯喬&nbsp;&nbsp;**[![GitHub](./image/github-16.png)](https://github.com/JhanJoe)
