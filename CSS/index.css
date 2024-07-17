@@ -70,10 +70,10 @@ table {
   .header-container{
     display: flex;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1000px;
     width: 100%; 
     margin: 10px auto; 
-    padding:0 100px;
+    padding:0 10px;
     box-sizing: border-box;
   }
   .header-logo{
