@@ -19,6 +19,8 @@
     
 
     <script src="./discord_webhook.js" type="module" defer></script>
+    <script src="./weekly.js" type="module" defer></script>
+    <script src="./card.js" type="module" defer></script>
     <script
       src="https://kit.fontawesome.com/fe66a8b17f.js"
       crossorigin="anonymous">
@@ -174,28 +176,57 @@
           </div>
         </section>
         <section class="card-container">
-          <div class="card-wrapper"><p class="card-text">新北市</p></div>
-          <div class="card-wrapper"><p class="card-text">台北市</p></div>
-          <div class="card-wrapper"><p class="card-text">基隆市</p></div>
-          <div class="card-wrapper"><p class="card-text">宜蘭縣</p></div>
-          <div class="card-wrapper"><p class="card-text">桃園市</p></div>
-          <div class="card-wrapper"><p class="card-text">新竹市</p></div>
-          <div class="card-wrapper"><p class="card-text">新竹縣</p></div>
-          <div class="card-wrapper"><p class="card-text">苗栗縣</p></div>
-          <div class="card-wrapper"><p class="card-text">台中市</p></div>
-          <div class="card-wrapper"><p class="card-text">彰化縣</p></div>
-          <div class="card-wrapper"><p class="card-text">南投縣</p></div>
-          <div class="card-wrapper"><p class="card-text">雲林縣</p></div>
-          <div class="card-wrapper"><p class="card-text">嘉義市</p></div>
-          <div class="card-wrapper"><p class="card-text">嘉義縣</p></div>
-          <div class="card-wrapper"><p class="card-text">台南市</p></div>
-          <div class="card-wrapper"><p class="card-text">高雄市</p></div>
-          <div class="card-wrapper"><p class="card-text">屏東縣</p></div>
-          <div class="card-wrapper"><p class="card-text">台東縣</p></div>
-          <div class="card-wrapper"><p class="card-text">花蓮縣</p></div>
-          <div class="card-wrapper"><p class="card-text">澎湖縣</p></div>
-          <div class="card-wrapper"><p class="card-text">金門縣</p></div>
-          <div class="card-wrapper"><p class="card-text">連江縣</p></div>
+          <div class="area">
+            <div class="card-title">北部地區</div>
+            <div class="card-container2">
+                <div class="card-wrapper" id="keelung"><p class="card-text">基隆市</p></div>
+                <div class="card-wrapper" id="taipei"><p class="card-text">臺北市</p></div>
+                <div class="card-wrapper" id="newtaipei"><p class="card-text">新北市</p></div>
+                <div class="card-wrapper" id="taoyuan"><p class="card-text">桃園市</p></div>
+                <div class="card-wrapper" id="hsinchucity"><p class="card-text">新竹市</p></div>
+                <div class="card-wrapper" id="hsinchu"><p class="card-text">新竹縣</p></div>
+                <div class="card-wrapper" id="miaoli"><p class="card-text">苗栗縣</p></div>
+            </div>
+          </div>
+
+          <div class="area">
+              <div class="card-title">中部地區</div>
+              <div class="card-container2">
+                  <div class="card-wrapper" id="taichung"><p class="card-text">臺中市</p></div>
+                  <div class="card-wrapper" id="changhua"><p class="card-text">彰化縣</p></div>
+                  <div class="card-wrapper" id="nantou"><p class="card-text">南投縣</p></div>
+                  <div class="card-wrapper" id="yunlin"><p class="card-text">雲林縣</p></div>
+                  <div class="card-wrapper" id="chiayicity"><p class="card-text">嘉義市</p></div>
+                  <div class="card-wrapper" id="chiayi"><p class="card-text">嘉義縣</p></div>
+              </div>
+          </div>
+
+          <div class="area">
+              <div class="card-title">南部地區</div>
+              <div class="card-container2">
+                  <div class="card-wrapper" id="tainan"><p class="card-text">臺南市</p></div>
+                  <div class="card-wrapper" id="kaohsiung"><p class="card-text">高雄市</p></div>
+                  <div class="card-wrapper" id="pingtung"><p class="card-text">屏東縣</p></div>
+              </div>
+          </div>
+
+          <div class="area">
+              <div class="card-title">東部地區</div>
+              <div class="card-container2">
+                  <div class="card-wrapper" id="yilan"><p class="card-text">宜蘭縣</p></div>
+                  <div class="card-wrapper" id="hualien"><p class="card-text">花蓮縣</p></div>
+                  <div class="card-wrapper" id="taitung"><p class="card-text">臺東縣</p></div>
+              </div>
+          </div>
+          
+          <div class="area">
+              <div class="card-title">外島地區</div>
+              <div class="card-container2">
+                  <div class="card-wrapper" id="penghu"><p class="card-text">澎湖縣</p></div>
+                  <div class="card-wrapper" id="kinmen"><p class="card-text">金門縣</p></div>
+                  <div class="card-wrapper" id="lienchiang"><p class="card-text">連江縣</p></div>
+              </div>
+          </div>
         </section>
       </div>
     </main>
