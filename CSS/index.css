@@ -148,10 +148,6 @@ table {
     margin-top: 10px;
     box-sizing: border-box;
   }
-  /*通用-圖片設定*/
-  .weather-tomorrow-img{
-    width:40%;
-  }
   /*各自*/
    /*各自-標題*/
   .weather-title-container{
@@ -208,7 +204,7 @@ table {
     word-wrap: break-word;
   }
   .weather-week-img{
-    height:30px;
+    height:auto;
     object-fit: cover;
     margin-top: 10px;
     box-sizing: border-box;

@@ -193,7 +193,8 @@ async function render_three_span_wether(location_name) {
 
   const weatherWx = weatherData["weather_data"][0]["wx"]
   console.log(weatherWx)
-  document.getElementById("today-img").src = `image/0${weatherWx}.svg`;
+  const wxCode = parseInt(weatherWx, 10); 
+  document.getElementById("today-img").src = `image/${wxCode < 10 ? '0' : ''}${wxCode}.svg`;
   
   //第二第三時段的時段文字
   const weatherItemContainer2 = document.querySelectorAll(".weather-items-container")[1]
