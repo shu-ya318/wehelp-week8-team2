@@ -7,9 +7,9 @@ async function weather(location){
         //console.log(weatherData);
         let minData = data["weatherElement"][8]["time"];
         let maxData = data["weatherElement"][12]["time"];
-        let filteredWeatherData = weatherData.filter(item => !item.startTime.includes("18:00:00"));
-        let filteredMinData = minData.filter(item => !item.startTime.includes("18:00:00"));
-        let filteredMaxData = maxData.filter(item => !item.startTime.includes("18:00:00"));
+        let filteredWeatherData = weatherData.filter(item => item.startTime.includes("06:00:00") || item.startTime.includes("12:00:00"));
+        let filteredMinData = minData.filter(item => item.startTime.includes("06:00:00") || item.startTime.includes("12:00:00"));
+        let filteredMaxData = maxData.filter(item => item.startTime.includes("06:00:00") || item.startTime.includes("12:00:00"));
         //console.log(filteredWeatherData ,filteredMinData, filteredMaxData);
         const arrays = [filteredWeatherData ,filteredMinData, filteredMaxData];
         const weekList = ["星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六"];
