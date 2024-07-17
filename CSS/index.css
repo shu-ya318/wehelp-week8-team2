@@ -204,8 +204,8 @@ table {
     word-wrap: break-word;
   }
   .weather-week-img{
-    height:auto;
-    object-fit: cover;
+    height:50px;
+    object-fit: contain;
     margin-top: 10px;
     box-sizing: border-box;
   }
