@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-HANT">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>氣象預報小幫手</title>
+    <link rel="stylesheet" type="text/css" href="CSS/index.css" />
+    <!--額外載入字型-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./render_sun_raise_and_set.js" type="module" defer></script>
+        <script src="./render_three_span.js" type="module" defer></script>
+    <script src="./render_sun_raise_and_set.js" type="module" defer></script>
+        <script src="./weekly.js" type="module" defer></script>
+    
+
+    <script src="./discord_webhook.js" type="module" defer></script>
+    <script src="./weekly.js" type="module" defer></script>
+    <script src="./card.js" type="module" defer></script>
+    <script
+      src="https://kit.fontawesome.com/fe66a8b17f.js"
+      crossorigin="anonymous">
+    </script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <h1>
+          <a href="https://shu-ya318.github.io/wehelp-week8-team2/" class="header-logo"> 氣象預報小幫手 </a>
+        </h1>
+        <div class="icons">
+          <a><img src="image/discord.png" id="discord" title="發布頁面上地區氣象至 Discord"></a>
+          <a
+            href="https://github.com/shu-ya318/wehelp-week8-team2/tree/main"
+            class="header-link"
+          >
+            <i class="fa-brands fa-github fa-2xl"></i>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main-container">
+        <section class="weather-container">
+          <div class="weather-title-container">
+            <p id="today-date" class="weather-title-text">2024-07-15</p>
+            <p id="selected-district" class="weather-title-text">新北市</p>
+          </div>
+          <div class="weather-items-container">
+            <div class="weather-item">
+              <p class="weather-subtitle">日出</p>
+              <p id="sunrise" class="weather-text">時分</p>
+            </div>
+            <div class="weather-item">
+              <p class="weather-subtitle">日落</p>
+              <p id="sunset" class="weather-text">時分</p>
+            </div>
+          </div>
+          <div class="weather-today-container">
+            <img
+              id="today-img"
+              class="weather-today-img"
+              src="image/placeholder.png"
+              alt="weather"
+            />
+            <div class="weather-today-wrapper">
+              <p class="weather-subtitle">今日白天</p>
+              <p id="today-temperature" class="weather-text">31°C~33°C</p>
+              <p id="today-precipitation" class="weather-text">降雨率:10%</p>
+            </div>
+          </div>
+
+          <div class="weather-items-container">
+            <div class="weather-item">
+              <p class="weather-subtitle">明日白天</p>
+              <p id="tomorrow-day-temperature" class="weather-text">
+                31°C~31°C
+              </p>
+              <p id="tomorrow-day-precipitation" class="weather-text">
+                降雨率:20%
+              </p>
+            </div>
+            <div class="weather-item">
+              <p class="weather-subtitle">明日夜間</p>
+              <p id="tomorrow-night-temperature" class="weather-text">
+                33°C~33°C
+              </p>
+              <p id="tomorrow-night-precipitation" class="weather-text">
+                降雨率:30%
+              </p>
+            </div>
+          </div>
+          <div class="weather-week-container">
+            <div class="weather-week-item">
+              <p class="weather-subtitle">未來一周氣象預報</p>
+              <div class="weather-week-wrapper">
+                <div class="weather-week-item-wrapper">
+                  <p id="text1" class="weather-text">(五)</p>
+                  <img
+                    id="img1" 
+                    class="weather-week-img"
+                    src="image/placeholder.png"
+                    alt="weather"
+                  />
+                  <p id="temperature1" class="weather-text">33°C~33°C</p>
+                </div>
+                <div class="weather-week-item-wrapper">
+                  <p id="text2" class="weather-text">(六)</p>
+                  <img
+                    id="img2"
+                    class="weather-week-img"
+                    src="image/placeholder.png"
+                    alt="weather"
+                  />
+                  <p id="temperature2" class="weather-text">
+                    33°C~33°C
+                  </p>
+                </div>
+                <div class="weather-week-item-wrapper">
+                  <p id="text3" class="weather-text">(日)</p>
+                  <img
+                    id="img3"
+                    class="weather-week-img"
+                    src="image/placeholder.png"
+                    alt="weather"
+                  />
+                  <p id="temperature3" class="weather-text">33°C~33°C</p>
+                </div>
+                <div class="weather-week-item-wrapper">
+                  <p id="text4" class="weather-text">(一)</p>
+                  <img
+                    id="img4"
+                    class="weather-week-img"
+                    src="image/placeholder.png"
+                    alt="weather"
+                  />
+                  <p id="temperature4" class="weather-text">33°C~33°C</p>
+                </div>
+                <div class="weather-week-item-wrapper">
+                  <p id="text5" class="weather-text">(二)</p>
+                  <img
+                    id="img5"
+                    class="weather-week-img"
+                    src="image/placeholder.png"
+                    alt="weather"
+                  />
+                  <p id="temperature5" class="weather-text">33°C~33°C</p>
+                </div>
+                <div class="weather-week-item-wrapper">
+                  <p id="text6" class="weather-text">(三)</p>
+                  <img
+                    id="img6"
+                    class="weather-week-img"
+                    src="image/placeholder.png"
+                    alt="weather"
+                  />
+                  <p id="temperature6" class="weather-text">
+                    33°C~33°C
+                  </p>
+                </div>
+                <div class="weather-week-item-wrapper">
+                  <p id="text7" class="weather-text">(四)</p>
+                  <img
+                    id="img7"
+                    class="weather-week-img"
+                    src="image/placeholder.png"
+                    alt="weather"
+                  />
+                  <p id="temperature7"  class="weather-text">
+                    33°C~33°C
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="card-container">
+          <div class="area">
+            <div class="card-title">北部地區</div>
+            <div class="card-container2">
+                <div class="card-wrapper" id="keelung"><p class="card-text">基隆市</p></div>
+                <div class="card-wrapper" id="taipei"><p class="card-text">臺北市</p></div>
+                <div class="card-wrapper" id="newtaipei"><p class="card-text">新北市</p></div>
+                <div class="card-wrapper" id="taoyuan"><p class="card-text">桃園市</p></div>
+                <div class="card-wrapper" id="hsinchucity"><p class="card-text">新竹市</p></div>
+                <div class="card-wrapper" id="hsinchu"><p class="card-text">新竹縣</p></div>
+                <div class="card-wrapper" id="miaoli"><p class="card-text">苗栗縣</p></div>
+            </div>
+          </div>
+
+          <div class="area">
+              <div class="card-title">中部地區</div>
+              <div class="card-container2">
+                  <div class="card-wrapper" id="taichung"><p class="card-text">臺中市</p></div>
+                  <div class="card-wrapper" id="changhua"><p class="card-text">彰化縣</p></div>
+                  <div class="card-wrapper" id="nantou"><p class="card-text">南投縣</p></div>
+                  <div class="card-wrapper" id="yunlin"><p class="card-text">雲林縣</p></div>
+                  <div class="card-wrapper" id="chiayicity"><p class="card-text">嘉義市</p></div>
+                  <div class="card-wrapper" id="chiayi"><p class="card-text">嘉義縣</p></div>
+              </div>
+          </div>
+
+          <div class="area">
+              <div class="card-title">南部地區</div>
+              <div class="card-container2">
+                  <div class="card-wrapper" id="tainan"><p class="card-text">臺南市</p></div>
+                  <div class="card-wrapper" id="kaohsiung"><p class="card-text">高雄市</p></div>
+                  <div class="card-wrapper" id="pingtung"><p class="card-text">屏東縣</p></div>
+              </div>
+          </div>
+
+          <div class="area">
+              <div class="card-title">東部地區</div>
+              <div class="card-container2">
+                  <div class="card-wrapper" id="yilan"><p class="card-text">宜蘭縣</p></div>
+                  <div class="card-wrapper" id="hualien"><p class="card-text">花蓮縣</p></div>
+                  <div class="card-wrapper" id="taitung"><p class="card-text">臺東縣</p></div>
+              </div>
+          </div>
+          
+          <div class="area">
+              <div class="card-title">外島地區</div>
+              <div class="card-container2">
+                  <div class="card-wrapper" id="penghu"><p class="card-text">澎湖縣</p></div>
+                  <div class="card-wrapper" id="kinmen"><p class="card-text">金門縣</p></div>
+                  <div class="card-wrapper" id="lienchiang"><p class="card-text">連江縣</p></div>
+              </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="footer-text">COPYRIGHT © 2024 wehelp 第五屆第二組</p>
+    </footer>
+  </body>
+</html>
